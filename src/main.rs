@@ -10,7 +10,7 @@ fn main() -> Result<(), Error> {
     let stdin = std::io::stdin();
     let mut input = String::new();
 
-    stdin.read_line(&mut input);
+    stdin.read_line(&mut input)?;
 
     for (ch, name) in d.search(input.trim()) {
         println!("{}: {}", name, ch);
